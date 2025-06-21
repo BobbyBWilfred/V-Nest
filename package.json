@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "start": "vite preview --port $PORT",
-    "lint": "eslint ."
-  },
+ "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "start": "vite preview --port $PORT --host"
+}
+,
   "dependencies": {
     "@tsparticles/all": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
