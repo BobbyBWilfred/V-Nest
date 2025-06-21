@@ -20,17 +20,17 @@ export default function App() {
         <>
             
             <style jsx global>{`
-                /* FONT IMPORTS */
+                
                 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
 
-                /* CSS VARIABLES & BASE STYLES */
+                
                 :root {
-                    --brand-black: #0A001F; /* Slightly purple-tinted black */
-                    --brand-gray: #180C33; /* Dark purple-gray */
-                    --brand-purple: #8B5CF6; /* Strong, vibrant purple */
-                    --brand-purple-light: #C084FC; /* Lighter purple for accents */
-                    --brand-purple-dark: #6D28D9; /* Darker purple */
-                    --purple-950: #1a0833; /* A very dark purple, almost black */
+                    --brand-black: #0A001F; 
+                    --brand-gray: #180C33; 
+                    --brand-purple: #8B5CF6; 
+                    --brand-purple-light: #C084FC; 
+                    --brand-purple-dark: #6D28D9; 
+                    --purple-950: #1a0833;
                     --purple-900: #3b0764;
                     --purple-800: #581c87;
                     --purple-700: #6b21a8;
@@ -50,12 +50,12 @@ export default function App() {
                 }
                 h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
 
-                /* CUSTOM SCROLLBAR */
+             
                 .custom-scrollbar::-webkit-scrollbar { width: 8px; }
                 .custom-scrollbar::-webkit-scrollbar-track { background: var(--brand-gray); }
                 .custom-scrollbar::-webkit-scrollbar-thumb { background-color: var(--brand-purple); border-radius: 20px; }
                 
-                /* KEYFRAME ANIMATIONS */
+                
                 @keyframes fade-in-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
                 @keyframes fade-in-down { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
                 @keyframes fade-in-fast { from { opacity: 0; } to { opacity: 1; } }
@@ -69,7 +69,7 @@ export default function App() {
                 .animation-delay-300 { animation-delay: 0.3s; }
                 .animation-delay-600 { animation-delay: 0.6s; }
 
-                /* BACKGROUND GRIDS */
+                
                 .bg-grid-purple {
                     background-image:
                         linear-gradient(to right, rgba(139, 92, 246, 0.1) 1px, transparent 1px),
@@ -84,7 +84,7 @@ export default function App() {
                     opacity: 0.5;
                 }
 
-                /* NAVIGATION LINK STYLE */
+               
                 .nav-link { position: relative; transition: color 0.3s; }
                 .nav-link::after {
                     content: ''; position: absolute; width: 100%;
@@ -95,7 +95,7 @@ export default function App() {
                 .nav-link:hover { color: white; }
                 .nav-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
                 
-                /* CTA BUTTONS */
+             
                 .cta-button, .cta-button-large, .cta-button-small {
                     display: inline-flex; align-items: center; justify-content: center;
                     font-weight: 600; border-radius: 9999px; color: white;
@@ -112,7 +112,7 @@ export default function App() {
                     background: linear-gradient(90deg, var(--brand-purple), var(--brand-purple-light));
                 }
                 
-                /* PORTFOLIO CARD SPOTLIGHT EFFECT */
+             
                 .portfolio-card {
                     position: relative; overflow: hidden;
                     border: 1px solid var(--purple-700);
@@ -125,9 +125,9 @@ export default function App() {
                     transform: translate(-50%, -50%);
                     opacity: 0; transition: opacity 0.3s; pointer-events: none;
                 }
-                .portfolio-card:hover::before { opacity: 0.3; } /* Reduced opacity for a subtle glow */
+                .portfolio-card:hover::before { opacity: 0.3; } 
 
-                /* APPLY SECTION CARD */
+               
                 .apply-card {
                    background: linear-gradient(145deg, var(--purple-950), #000000);
                    border: 1px solid var(--purple-800);
@@ -137,11 +137,11 @@ export default function App() {
                     box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
                 }
 
-                /* TESTIMONIAL CAROUSEL */
+                
                 .testimonial-carousel { animation: scroll 40s linear infinite; }
                 .testimonial-carousel-container:hover .testimonial-carousel { animation-play-state: paused; }
                 
-                /* EVENT CARD (RESTORED & STYLED) */
+                
                 .event-card {
                   display: flex; background-color: var(--purple-950);
                   border: 1px solid var(--purple-800);
@@ -158,7 +158,7 @@ export default function App() {
                     display: flex; flex-direction: column; justify-content: center;
                 }
                                 
-                /* FOOTER */
+              
                 .footer-link { transition: color 0.3s, padding-left 0.3s; }
                 .footer-link:hover { color: white; padding-left: 4px; }
                 .social-icon {
@@ -169,7 +169,7 @@ export default function App() {
                 }
                 .social-icon:hover { background-color: var(--brand-purple); color: white; transform: scale(1.1); }
 
-                /* QUIZ STYLES */
+              
                 .quiz-option {
                     width: 100%;
                     padding: 1rem;
@@ -190,7 +190,7 @@ export default function App() {
                     box-shadow: 0 5px 10px rgba(139, 92, 246, 0.5);
                 }
 
-                /* Hero section specific enhancements */
+              
                 .hero-title {
                     text-shadow: 0 0 15px rgba(139, 92, 246, 0.7);
                 }
@@ -199,11 +199,9 @@ export default function App() {
                     text-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
                 }
                 
-                /* ======================================== */
-                /* == STYLISH TV & PEDESTAL STAND STYLES == */
-                /* ======================================== */
+              
 
-                /* This wrapper centers the entire TV component */
+              
                 .tv-area-wrapper {
                     max-width: 900px;
                     margin: 4rem auto 0;
@@ -213,7 +211,7 @@ export default function App() {
                     align-items: center;
                 }
 
-                /* TV Screen container with a new purple glow */
+               
                 .tv-screen-container {
                     width: 100%;
                     background: linear-gradient(145deg, #2d1a47, #1e1232);
@@ -222,13 +220,12 @@ export default function App() {
                     padding: 1.5rem;
                     position: relative;
                     z-index: 10;
-                    /* Stylish Glow Effect */
+                    
                     box-shadow: 0 20px 40px rgba(0,0,0,0.6),
                                 inset 0 0 15px rgba(0,0,0,0.7),
-                                0 0 45px rgba(139, 92, 246, 0.25); /* <-- The Glow */
+                                0 0 45px rgba(139, 92, 246, 0.25); 
                 }
 
-                /* The actual screen content area */
                 .tv-screen {
                     background: var(--brand-black, #0A001F);
                     height: 450px;
@@ -241,7 +238,7 @@ export default function App() {
                     align-items: center;
                 }
 
-                /* Controls below the screen */
+                
                 .tv-controls {
                     display: flex;
                     justify-content: center;
@@ -252,38 +249,107 @@ export default function App() {
                 }
 
 
-                /* --- New Pedestal Stand CSS --- */
+               
 
                 .tv-stand-container {
                     position: relative;
                     display: flex;
-                    flex-direction: column; /* Stacks the post on top of the base */
+                    flex-direction: column; 
                     align-items: center;
                     width: 100%;
                 }
 
-                /* The central post connecting screen to base */
+               
                 .tv-stand-pedestal {
                     width: 120px;
                     height: 60px;
                     background: linear-gradient(to right, #1a1a2e, #2a2a3e, #1a1a2e);
-                    margin-top: -10px; /* Neatly connects to the TV bottom */
+                    margin-top: -10px; 
                     z-index: 5;
                     box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-                    /* Creates a sleek, modern trapezoid shape */
+                  
                     clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
                 }
 
-                /* The wide, flat base of the stand */
+            
                 .tv-stand-base {
                     width: 350px;
                     height: 15px;
                     background: linear-gradient(180deg, #2a2a3e, #1a1a2e);
                     border-radius: 10px;
-                    margin-top: -2px; /* Slight overlap with pedestal bottom for a seamless look */
+                    margin-top: -2px; 
                     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
                 }
 
+                
+
+                @media (max-width: 768px) {
+                    
+                    .hero-title { font-size: 2.75rem; line-height: 1.15; }
+                    .text-4xl, .md\:text-5xl { font-size: 2.25rem; } 
+                    .text-3xl { font-size: 1.75rem; }
+                    .hero-subtitle { font-size: 1.1rem; }
+
+                    
+                    section.py-28 { padding-top: 5rem; padding-bottom: 5rem; }
+                    section.md\:py-36 { padding-top: 5rem; padding-bottom: 5rem; }
+                    
+                  
+                    .tv-area-wrapper {
+                        margin-top: 2.5rem;
+                        padding: 0 0.5rem;
+                    }
+                    .tv-screen-container {
+                        padding: 1rem;
+                        border-width: 6px;
+                        border-radius: 1.25rem;
+                    }
+                    .tv-screen {
+                        height: 380px;
+                        border-radius: 0.75rem;
+                    }
+               
+                    .tv-screen .text-4xl, .tv-screen .md\:text-5xl { font-size: 2rem; }
+                    .tv-screen .text-3xl, .tv-screen .md\:text-4xl { font-size: 1.75rem; }
+                    .tv-screen .text-lg, .tv-screen .md\:text-xl { font-size: 1rem; }
+
+                    .tv-controls { margin-top: 1.25rem; }
+                    .tv-stand-pedestal { width: 100px; height: 50px; }
+                    .tv-stand-base { width: 280px; height: 12px; }
+
+                    
+                    .event-card { flex-direction: column; }
+                    .date-box {
+                        width: 100%;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0.75rem 1rem;
+                        gap: 1rem;
+                    }
+                    .date-box > div:first-child { font-size: 2rem; } 
+                    .date-box > div:last-child { font-size: 0.9rem; text-align: left; } 
+
+                    
+                    footer .grid { text-align: center; }
+                    footer .grid > div { margin-bottom: 2rem; }
+                    footer ul { display: inline-block; text-align: left; }
+                    footer .flex.items-start, footer .flex.items-center { justify-content: center; }
+                    footer .flex.space-x-4 { justify-content: center; }
+                    footer .justify-between { flex-direction: column; gap: 1rem; align-items: center; }
+                }
+
+                @media (max-width: 480px) {
+                
+                    .hero-title { font-size: 2.25rem; }
+                    .text-4xl, .md\:text-5xl { font-size: 2rem; }
+
+                    
+                    .cta-button, .cta-button-large { padding: 0.6rem 1.5rem; font-size: 0.9rem; }
+                    
+                  
+                    .tv-screen .p-8, .tv-screen .md\:p-12 { padding: 1.5rem; }
+                }
             `}</style>
             
             <div className="main-container">
